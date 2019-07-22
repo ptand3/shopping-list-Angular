@@ -1,3 +1,38 @@
-<p>
-  shopping-edit works!
-</p>
+<!-- The component will add/delete the ingredients to get added in the list -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <form>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control" (input) = "OnUpdateIngredientName($event)">
+        </div>
+        <div class="col-sm-5 form-group">
+          <label for="name">Amount</label>
+          <input type="text" id="amount" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" (click) = "OnAddingIngredient()">Add</button>
+          <button class="btn btn-danger" type="button">Delete</button>
+          <button class="btn btn-primary" type="button">Clear</button>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="list-group">
+            <!-- adding ingrediant properties inside each item -->
+            <a class="list-group-item" 
+            style="cursor: pointer;">
+            <p [innerText]="ingredientStatus"></p> 
+            <!-- <p *ngIf ="ingredientStatus">Ingredient is added with {{ingName}}</p> -->
+          </a> 
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

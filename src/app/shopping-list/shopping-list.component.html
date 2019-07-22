@@ -1,3 +1,16 @@
-<p>
-  shopping-list works!
-</p>
+<!-- The shopping list will contain the list of items with the ingredients added in it -->
+
+<div class="row">
+  <div class="col-xl-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul class="list-group">
+      <!-- adding ingrediant properties inside each item -->
+      <a class="list-group-item" 
+      style="cursor: pointer;"
+      *ngFor ="let ingredient of ingredients">
+      {{ ingredient.name }} ({{ ingredient.amount }})
+    </a> 
+    </ul>
+  </div>
+</div>

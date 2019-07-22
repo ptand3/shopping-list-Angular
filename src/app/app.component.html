@@ -1,8 +1,33 @@
+<!-- The values recieved through featureSelected , on the basis of that will call the navigate method
+$event will fetch the values from the featureSelected -->
 
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class = "container">
   <div class="row">
     <div class="col-md-12">
-      <h2> I am working !! </h2>
+  <app-recipe *ngIf="loadedFeature ==='recipes'"></app-recipe>
+  <app-shopping-list *ngIf="loadedFeature ==='shoppingLists'"></app-shopping-list>
   </div>
 </div>
+
+<!-- $event is an object which is used to fetch some data of the server -->
+<!-- Binding the custom event (serverCreated) that will listen the event -->
+<!-- <div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBluePrintAdded($event)"></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xl-12">
+      <button class="btn btn-primary" (click)="onChangedElement()">Changed First Element</button>
+      <button class="btn btn-danger" (click)="onDestroyElement()">Destroy first Element</button>
+      <app-server-element *ngFor="let serverElement  of serverElements" [element]="serverElement"
+        [name]="serverElement.name">
+        
+        // passing the local reference to access the ng-content 
+        <p #paragraph> 
+          <strong *ngIf="serverElement.type === 'server'" style="color:red">{{serverElement.content }}</strong>
+          <em *ngIf="serverElement.type === 'blueprint'">{{serverElement.content }}</em>
+        </p>
+      </app-server-element>
+    </div>
+  </div>
+</div> -->

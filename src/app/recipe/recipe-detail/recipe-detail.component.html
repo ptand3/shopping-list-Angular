@@ -1,0 +1,40 @@
+<!-- Will contain all the information of the selective recipe item  -->
+
+<!-- Image -->
+<div class="row">
+  <div class="col-xs-12">
+    <img src= "../../../assets/image-recipe.jpeg"  alt="{{ recipe.name }}" class="image-responsive" />
+  </div>
+</div>
+<!-- Recipe heading -->
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Recipe<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">To Shopping lisst</a></li>
+        <li><a href="#">Delete recipe</a></li>
+        <li><a href="#">Edit recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{ recipe.description }}</p>
+  </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <p>Ingredients</p>
+    </div>
+  </div>
+  

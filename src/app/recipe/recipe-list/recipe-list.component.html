@@ -1,3 +1,16 @@
-<p>
-  recipe-list works!
-</p>
+<!-- Addding recipes descriptions to the template -->
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+  </div>
+</div>
+
+<!-- //Passing the data from the recipe list component to recipe Item Component -->
+<app-recipe-item 
+*ngFor="let recipeEl of recipes"
+[recipe] ="recipeEl"
+(recipeItemSelected) = "OnRecipeSelected(recipeEl)"></app-recipe-item> 

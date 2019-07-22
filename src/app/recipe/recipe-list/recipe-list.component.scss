@@ -1,0 +1,25 @@
+.row{
+    margin-top:10px;
+    .col-xs-12{
+        width: 90%;
+        a{
+            color:#000;
+        }
+    }
+}
+.list-group-item{
+    display:flex;
+    flex-direction:row;
+    position: relative;
+    .pull-left{
+        width: 50%;
+    }
+    .pull-right{
+        display: block;
+        width: 50%;
+        img{
+            margin-left: 120px;
+            max-height: 100px !important;
+        }
+    }
+}

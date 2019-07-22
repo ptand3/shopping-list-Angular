@@ -1,0 +1,36 @@
+.row{
+    margin-top:10px;
+    .col-xs-12{
+        width: 90%;
+        a{
+            color:#000;
+        }
+    }
+}
+.list-group-item{
+    display:flex;
+    flex-direction:row;
+    position: relative;
+
+    &:focus,
+    &:hover{
+        background-color: #f0f1f2;
+    }
+    .pull-left{
+        width: 50%;
+        .list-group-item-heading{
+            color:#000;
+        }
+        .list-group-item-text{
+            color:#000;
+        }
+    }
+    .pull-right{
+        display: block;
+        width: 50%;
+        img{
+            margin-left: 120px;
+            max-height: 100px !important;
+        }
+    }
+}
