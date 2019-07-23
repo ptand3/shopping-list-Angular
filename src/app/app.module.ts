@@ -17,11 +17,18 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { BasicHighlightDirective} from '../app/basic-highlight-attribute';
+// import { Ingredient } from '../app/shared/ingredient.model';
+import { Dropdown } from '../app/shared/dropdown-directive';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import {  SlickComponent } from '../app/slick/slick.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SlickComponent,
     ServerComponent,
     ServersComponent,
     HeaderComponent,
@@ -32,13 +39,18 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ShoppingEditComponent,
     RecipeDetailComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    BasicHighlightDirective,
+    // Ingredient,
+     Dropdown 
+
   ],
   imports: [
     FormsModule,
     BrowserModule,
     // AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

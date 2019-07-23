@@ -11,5 +11,9 @@ export class RecipeComponent implements OnInit {
 
   ngOnInit() {
   }
+  showMessage($event:string){ 
+    debugger;
+    console.log("inside reciept component")
+  }
 
 }

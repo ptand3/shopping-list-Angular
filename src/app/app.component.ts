@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 }) 
 export class AppComponent {
   // title = 'app';
@@ -13,6 +13,9 @@ export class AppComponent {
     name :"TestServer",
     content:"This is a test"
   }];
+  oddNumbers =[1,3,5,7,9];
+  evenNumbers = [2,4,6,8];
+  onlyOdd=false;
 
   onServerAdded(serverData :{serverName :string ,serverContent: string}) {
     this.serverElements.push({
